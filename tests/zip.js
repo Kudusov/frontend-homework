@@ -10,6 +10,13 @@ QUnit.module('Тестируем функцию zip', function () {
 			cost: '120$'
 		};
 		assert.deepEqual(zip(obj), obj);
+
+		const obj2 = {
+			name: 'Nobody',
+			age: 21
+		};
+
+		assert.deepEqual(zip(obj2), {name: 'Nobody', age: 21})
 	});
 
 	QUnit.test('Функция работает с объектами среди которых есть объекты без свойств', function (assert) {
